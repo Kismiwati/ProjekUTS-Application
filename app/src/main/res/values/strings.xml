@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Application</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="resep_minuman">resep minuman</string>
+    <string name="resep_makanan">resep makanan</string>
+    <string name="daftar_minuman">daftar minuman</string>
+    <string name="min">min</string>
+    <string name="daftar_makanan">daftar makanan</string>
+    <string name="mak">mak</string>
+    <string name="masuk">masuk</string>
+    <string name="mPassword">Password</string>
+    <string name="mUsername">Username</string>
+    <string name="mLogin">Login</string>
+    <string name="loglo">loglo</string>
+    <string name="masuk_admin">masuk admin</string>
+    <string name="pelanggan">pelanggan</string>
+    <string name="aMenu_resto">menu resto</string>
+    <string name="logres">logres</string>
+    <string name="makanan1">1. Chicken steak saus enoki.</string>
+    <string name="makanan2">2. Ayam lada hitam.</string>
+    <string name="makanan3">3. Gurame asam manis.</string>
+    <string name="makanan4">4. Phak cam kee/Bai qie ji.</string>
+    <string name="makanan5">5. Ayam goreng serundeng.</string>
+    <string name="makanan6">6. Oseng cumi asin pedas.</string>
+
+    <string name="minuman1">1. Manggo jelly milk ice.</string>
+    <string name="minuman2">2. Es thai tea.</string>
+    <string name="minuman3">3. Es jeruk sirup melon.</string>
+    <string name="minuman4">4. King manggo thai.</string>
+    <string name="minuman5">5. Cincau susu gula merah.</string>
+    <string name="minuman6">6. Kopi susu gula aren.</string>
+</resources>

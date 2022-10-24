@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--layout yang digunakan adalah LinearLayout,
+atribut android:layout_width dan android:layout_height diatur menjadi match_parent,
+atribut android:background digunakan untuk memberikan warna background dengan warna #FF9800
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FF9800"
+    android:orientation="vertical">
+
+    <!--
+    TextView digunakan untuk menambahkan teks pada tampilan,
+    id dari textview ini adalah item_title, dengan atribut :
+    atribut layout_width dan height diatur wrap_content,
+    atribut android:textColor dan android:textColorHint yaitu  berwarna hitam,
+    teks dengan ukuran 14sp, gaya teks tebal,
+    -->
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <!--imageview digunakan untuk menambahkan gambar dan mengatur tata letak gambar,
+    id dari gambar ii adalah item_image,
+    atribut android:layout_width diatur dengan jarak 200,
+   atribut android:layout_height ditur dengan jarak 194,
+   atribut android:importantForAccessibility yaitu no,
+   untuk android:scaleType adalah centerCrop-->
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="200dp"
+        android:layout_height="194dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop" />
+
+</LinearLayout>

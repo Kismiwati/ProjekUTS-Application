@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--layout yang digunakan adalah constraint,
+atribut android:layout_width dan android:layout_height diatur menjadi match_parent,
+atribut android:background digunakan untuk memberikan warna background dengan warna #FF9800
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9800"
+    tools:context=".MasukActivity">
+
+    <!--imageview digunakan untuk menambahkan gambar dan mengatur tata letak gambar,
+    id dari gambar ii adalah imageView2,
+    atribut android:layout_width diatur dengan jarak 206dp,
+   atribut android:layout_height ditur dengan jarak 180dp,
+   untuk atribut marginStart diatur 84dp, atribut marginTop diatur 84dp,
+   untuk atribut layout_constraintStart_toStartOf dan layout_constraintTop_toTopOf diatur menjadi parent,
+   untuk atribut srcCompat yaitu @drawable/loglo dan untuk atribut contentDescriptionnya yaitu loglo
+   -->
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="206dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/loglo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loglo"
+        tools:ignore="ImageContrastCheck" />
+
+    <!--
+    TextView digunakan untuk menambahkan teks pada tampilan,
+    id dari textview ini adalah textView, dengan atribut :
+    atribut layout_width dan height diatur wrap_content,
+    atribut textnya yaitu Login dengan warna teks putih, dengan ukuran 28sp, gaya teks tebal,
+    -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/mLogin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <!--
+    atribut id EditText yaitu mUsernameText,
+    atribut android:hint dengan teks "Username",
+    atribut android:inputType yaitu textPersonName,
+    atribut android:textColorHint yaitu hitam
+    -->
+    <EditText
+        android:id="@+id/mUsernameText"
+        android:layout_width="365dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints="USERNAME"
+        android:ems="10"
+        android:hint="@string/mUsername"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="TextContrastCheck" />
+
+    <!--
+    atribut id EditText yaitu mPasswordText,
+    atribut android:hint dengan teks "Password",
+    atribut android:inputType yaitu numbertPersonName,
+    atribut android:textColorHint yaitu hitam
+    -->
+    <EditText
+        android:id="@+id/mPasswordText"
+        android:layout_width="361dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:autofillHints="PASSWORD"
+        android:ems="10"
+        android:hint="@string/mPassword"
+        android:inputType="numberPassword"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mUsernameText"
+        tools:ignore="TextContrastCheck" />
+
+    <!--
+    button digunakan untuk menambahkankan tombol pada tampilan,
+    atribut idnya yaitu mbtnLogin,
+    atribut layout_width diatur 0dp,
+    atribut android:backgroundTint diatur dengan warna putih,
+    dengan teks "masuk ",
+    atribut android:textColor diatur dengan warna #263238,
+  -->
+    <Button
+        android:id="@+id/mbtnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/masuk"
+        android:textColor="#263238"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mPasswordText"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--layout yang digunakan adalah constraint,
+atribut android:layout_width dan android:layout_height diatur menjadi match_parent,
+atribut android:background digunakan untuk memberikan warna background dengan warna #FF9800
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9800"
+    tools:context=".UtamaActivity">
+
+    <!--imageview digunakan untuk menambahkan gambar dan mengatur tata letak gambar,
+    id dari gambar ini adalah imageView4,
+    atribut android:layout_width diatur dengan jarak 115dp,
+    atribut android:layout_height ditur dengan jarak 97dp,
+    untuk atribut marginStart diatur 40dp, atribut marginTop diatur 100dp,
+    untuk atribut layout_constraintStart_toStartOf dan layout_constraintTop_toTopOf diatur menjadi parent,
+    untuk atribut srcCompat yaitu @drawable/mak dan untuk atribut contentDescriptionnya yaitu mak
+    -->
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="115dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/mak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mak"
+        tools:ignore="ImageContrastCheck" />
+
+    <!--
+    button digunakan untuk menambahkankan tombol pada tampilan,
+    atribut idnya yaitu ubtnMak,
+    atribut android:backgroundTint diatur dengan ?android:attr/colorBackground,
+    dengan teks "daftar makanan",
+    atribut android:textColor diatur dengan warna #FF9800,
+    -->
+    <Button
+        android:id="@+id/ubtnMak"
+        android:layout_width="156dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="?android:attr/colorBackground"
+        android:text="@string/daftar_makanan"
+        android:textColor="#FF9800"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--imageview digunakan untuk menambahkan gambar dan mengatur tata letak gambar,
+    id dari gambar ini adalah imageView5,
+    atribut android:layout_width diatur dengan jarak 111dp,
+    atribut android:layout_height ditur dengan jarak 95dp,
+    untuk atribut marginStart diatur 40dp, atribut marginTop diatur 16dp,
+    untuk atribut layout_constraintStart_toStartOf dan layout_constraintTop_toTopOf diatur menjadi parent,
+    untuk atribut srcCompat yaitu @drawable/min dan untuk atribut contentDescriptionnya yaitu min
+    -->
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="111dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/min"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:srcCompat="@drawable/min" />
+
+    <!--
+    button digunakan untuk menambahkankan tombol pada tampilan,
+    atribut idnya yaitu ubtnMin,
+    atribut android:backgroundTint diatur dengan ?android:attr/colorBackground,
+    dengan teks "daftar minuman",
+    atribut android:textColor diatur dengan warna #FF9800,
+    -->
+    <Button
+        android:id="@+id/ubtnMin"
+        android:layout_width="155dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="?android:attr/colorBackground"
+        android:text="@string/daftar_minuman"
+        android:textColor="#FF9800"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/ubtnMak" />
+
+    <!--
+    button digunakan untuk menambahkankan tombol pada tampilan,
+    atribut idnya yaitu ubtnResMak,
+    atribut android:backgroundTint diatur dengan ?android:attr/colorBackground,
+    dengan teks "resep makanan",
+    -->
+    <Button
+        android:id="@+id/ubtnResMak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/resep_makanan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.381"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <!--
+    button digunakan untuk menambahkankan tombol pada tampilan,
+    atribut idnya yaitu ubtnResMin,
+    atribut android:backgroundTint diatur dengan ?android:attr/colorBackground,
+    dengan teks "resep minuman",
+    -->
+    <Button
+        android:id="@+id/ubtnResMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/resep_minuman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ubtnResMak" />
+</androidx.constraintlayout.widget.ConstraintLayout>

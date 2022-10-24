@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--layout yang digunakan adalah constraint,
+atribut android:layout_width dan android:layout_height diatur menjadi match_parent,
+atribut android:background digunakan untuk memberikan warna background dengan warna #FF9800-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9800"
+    tools:context=".MainActivity">
+
+    <!--imageview digunakan untuk menambahkan gambar dan mengatur tata letak gambar,
+    id dari gambar ii adalah imageView,
+    atribut android:layout_width diatur dengan jarak 239dp,
+    atribut android:layout_height ditur dengan jarak 206dp,
+    untuk atribut marginStart diatur 84dp, atribut marginTop diatur 80dp,
+    untuk atribut layout_constraintStart_toStartOf dan layout_constraintTop_toTopOf diatur menjadi parent,
+    untuk atribut srcCompat yaitu @drawable/logres dan untuk atribut contentDescriptionnya yaitu logres
+    -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="239dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logres"
+        android:contentDescription="@string/logres" />
+
+    <!--
+    TextView digunakan untuk menambahkan teks pada tampilan,
+    id dari textview ini adalah text_menu, dengan atribut :
+    atribut layout_width dan height diatur wrap_content,
+    atribut textnya yaitu menu resto dengan warna teks putih, dengan ukuran 28sp, gaya teks tebal,
+    -->
+    <TextView
+        android:id="@+id/text_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/aMenu_resto"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <!--
+    button digunakan untuk menambahkankan tombol pada tampilan,
+    atribut idnya yaitu abtnPelanggan,
+    atribut layout_width diatur 0dp,
+    atribut android:backgroundTint diatur dengan warna putih,
+    dengan teks "pelanggan",
+    atribut android:textColor diatur dengan warna #FF9800,
+    -->
+    <Button
+        android:id="@+id/abtnPelanggan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/pelanggan"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_menu" />
+
+    <!--
+    button digunakan untuk menambahkankan tombol pada tampilan,
+    atribut idnya yaitu abtnLogin,
+    atribut layout_width diatur 0dp,
+    atribut android:backgroundTint diatur dengan warna putih,
+    dengan teks "masuk admin",
+    atribut android:textColor diatur dengan warna #FF9800,
+  -->
+    <Button
+        android:id="@+id/abtnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/masuk_admin"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abtnPelanggan" />
+
+    <Button
+        android:id="@+id/btnTbh"
+        android:layout_width="357dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/white"
+        android:text="tambah data pelanggan"
+        android:textColor="#FF9800"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abtnLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
